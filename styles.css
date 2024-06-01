@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('back2.jpg');
+    /* Update with your background image */
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card li {
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.profile-details p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    width: 70%;
+    /* Adjust width as needed */
+    max-width: 600px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #000;
+    /* Black font color */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #000;
+    /* Black font color */
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.card.about p {
+    cursor: pointer;
+}
+
+.card.about p:hover::after {
+    content: url('related_image_about.jpg');
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.card.projects li {
+    cursor: pointer;
+}
+
+.card.projects li:hover {
+    text-decoration: underline;
+}
+
+.card.projects li:hover::after {
+    content: "https://project_link.com";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
